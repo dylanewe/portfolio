@@ -1,12 +1,12 @@
 import { motion } from "motion/react";
-import { Code2, Coffee, Music, Gamepad2 } from "lucide-react";
+import { Brain, UtensilsCrossed, Gamepad2, Dumbbell } from "lucide-react";
 
 export function About() {
   const interests = [
-    { icon: Code2, label: "Open Source" },
-    { icon: Coffee, label: "Coffee Brewing" },
-    { icon: Music, label: "Electronic Music" },
+    { icon: Brain, label: "AI/ML" },
+    { icon: UtensilsCrossed, label: "Cooking" },
     { icon: Gamepad2, label: "Gaming" },
+    { icon: Dumbbell, label: "Working Out" },
   ];
 
   return (
@@ -19,7 +19,7 @@ export function About() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-mono tracking-wider mb-12 flex items-center gap-2">
-            <span style={{ color: "var(--neon-cyan)" }}>ABOUT_ME</span>
+            <span style={{ color: "var(--neon-cyan)" }}>// ABOUT ME</span>
             <motion.span
               animate={{ opacity: [1, 0, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
@@ -39,17 +39,16 @@ export function About() {
               className="bg-card border border-border rounded-lg p-6 shadow-lg"
             >
               <p className="text-muted-foreground mb-4">
-                I'm a passionate software engineer specializing in backend systems and cloud infrastructure.
-                With expertise in Go, Python, and modern DevOps practices, I build scalable solutions that power
-                high-performance applications.
+                I'm a recent graduate from UW-Madison with a passion for backend and AI systems.
+                I'm proficient in Golang and NodeJS, and have solid experience building cloud infrastructure
+                and microservices architectures.
               </p>
               <p className="text-muted-foreground mb-4">
-                My focus is on designing robust microservices architectures, optimizing distributed systems,
-                and implementing cutting-edge technologies to solve complex engineering challenges.
+                My focus is on creating scalable, efficient systems and exploring the intersection of
+                traditional backend development with modern AI technologies.
               </p>
               <p className="text-muted-foreground">
-                When I'm not coding, I'm exploring new technologies, contributing to open source, or diving
-                deep into system design patterns and performance optimization techniques.
+                Outside of coding, I enjoy cooking, playing games, and working out to stay balanced and energized.
               </p>
             </motion.div>
 

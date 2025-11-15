@@ -33,10 +33,10 @@ export function Skills() {
       ],
     },
     {
-      category: "Data & Messaging",
+      category: "Data Storage",
       skills: [
         { name: "Redis", percentage: 85 },
-        { name: "Kafka", percentage: 82 },
+        { name: "MongoDB", percentage: 82 },
         { name: "PostgreSQL", percentage: 80 },
       ],
     },
@@ -53,7 +53,7 @@ export function Skills() {
       skills: [
         { name: "Claude Code", percentage: 85 },
         { name: "Git", percentage: 90 },
-        { name: "CI/CD Pipelines", percentage: 80 },
+        { name: "MCPs", percentage: 80 },
       ],
     },
   ];
@@ -86,7 +86,7 @@ export function Skills() {
         >
           <div className="mb-12">
             <h2 className="font-mono tracking-wider mb-4" style={{ color: "var(--neon-cyan)" }}>
-              TECHNICAL_STACK
+              // SKILLS
             </h2>
             <motion.div
               initial={{ width: 0 }}

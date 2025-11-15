@@ -6,14 +6,11 @@ import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 import { Footer } from "./components/Footer";
 import { ProjectsGrid } from "./components/ProjectsGrid";
+import profileImage from "../data/profile.JPG";
 
 export default function App() {
   const [activeView, setActiveView] = useState<"home" | "projects">("home");
   const [isDark, setIsDark] = useState(true);
-
-  // Profile image URL from Unsplash
-  const profileImage =
-    "https://images.unsplash.com/photo-1752859951149-7d3fc700a7ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjMxMjU5NDd8MA&ixlib=rb-4.1.0&q=80&w=1080";
 
   // Initialize theme from localStorage or default to dark
   useEffect(() => {

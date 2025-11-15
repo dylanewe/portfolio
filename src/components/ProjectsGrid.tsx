@@ -21,71 +21,36 @@ export function ProjectsGrid() {
   const projects: Project[] = [
     {
       id: "1",
-      title: "Distributed Cache System",
-      shortDescription: "High-performance caching layer using Redis and Go for microservices architecture",
+      title: "SubTrack",
+      shortDescription: "Subscription tracking and management application built with NodeJS",
       fullDescription:
-        "Built a distributed caching system that reduced database load by 70% and improved API response times by 45%. Implemented cache invalidation strategies, pub/sub patterns, and horizontal scaling capabilities. Handles over 100k requests per second with sub-millisecond latency.",
-      techStack: ["Go", "Redis", "Docker", "Kubernetes"],
-      thumbnail: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300",
+        "A full-featured subscription tracker that helps users manage and monitor their recurring subscriptions. Built with NodeJS, this application provides insights into spending patterns and upcoming renewals.",
+      techStack: ["NodeJS", "JavaScript"],
+      thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300",
       borderColor: "var(--neon-cyan)",
-      demoUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/dylanewe/subtrack",
     },
     {
       id: "2",
-      title: "Real-time Analytics Pipeline",
-      shortDescription: "Stream processing system for analyzing user behavior data in real-time",
+      title: "Blockchain Simulator",
+      shortDescription: "Blockchain simulation API built with Python and Flask",
       fullDescription:
-        "Developed a scalable analytics pipeline using Kafka and Python that processes millions of events daily. Implemented real-time aggregations, anomaly detection, and custom metrics. Reduced data processing time from hours to seconds with stream processing architecture.",
-      techStack: ["Python", "Kafka", "PostgreSQL", "Grafana"],
-      thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300",
+        "A blockchain simulator API that demonstrates core blockchain concepts including block creation, hashing, and chain validation. Built with Python and Flask to provide a RESTful interface for exploring blockchain mechanics.",
+      techStack: ["Python", "Flask"],
+      thumbnail: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=300",
       borderColor: "var(--neon-purple)",
-      githubUrl: "#",
+      githubUrl: "https://github.com/dylanewe/blockchain",
     },
     {
       id: "3",
-      title: "GraphQL API Gateway",
-      shortDescription: "Unified API gateway aggregating multiple microservices with GraphQL",
+      title: "GoDis",
+      shortDescription: "Redis clone implementation written in Go",
       fullDescription:
-        "Created a centralized GraphQL gateway that simplified client integrations by providing a single endpoint for multiple backend services. Implemented schema stitching, batching, and caching strategies. Reduced API calls by 60% and improved developer experience significantly.",
-      techStack: ["NodeJS", "GraphQL", "Apollo", "Docker"],
-      thumbnail: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=300",
+        "A lightweight Redis clone built from scratch in Go, implementing core Redis data structures and commands. This project explores the internals of in-memory data stores and demonstrates proficiency in Go and systems programming.",
+      techStack: ["Go", "Redis"],
+      thumbnail: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300",
       borderColor: "var(--glitch-pink)",
-      demoUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      id: "4",
-      title: "Kubernetes Operator",
-      shortDescription: "Custom K8s operator for automated database backup and recovery",
-      fullDescription:
-        "Designed a Kubernetes operator that automates database backup, restoration, and monitoring tasks. Implemented custom resource definitions (CRDs) and reconciliation loops. Reduced operational overhead by 80% and eliminated manual intervention in backup processes.",
-      techStack: ["Go", "Kubernetes", "Helm", "PostgreSQL"],
-      thumbnail: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=300",
-      borderColor: "var(--glitch-green)",
-      githubUrl: "#",
-    },
-    {
-      id: "5",
-      title: "CI/CD Automation Platform",
-      shortDescription: "Self-service deployment platform with automated testing and rollbacks",
-      fullDescription:
-        "Built an internal platform that streamlined the deployment process across 50+ microservices. Integrated automated testing, canary deployments, and instant rollback capabilities. Reduced deployment time from 2 hours to 15 minutes while improving reliability.",
-      techStack: ["Python", "GitHub Actions", "Terraform", "Azure"],
-      thumbnail: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=300",
-      borderColor: "var(--neon-cyan)",
-      demoUrl: "#",
-    },
-    {
-      id: "6",
-      title: "Serverless Event System",
-      shortDescription: "Event-driven architecture using serverless functions and message queues",
-      fullDescription:
-        "Architected a serverless event processing system that handles asynchronous workflows at scale. Implemented dead-letter queues, retry mechanisms, and event sourcing patterns. Achieved 99.99% uptime while reducing infrastructure costs by 40%.",
-      techStack: ["NodeJS", "Azure Functions", "Kafka", "Redis"],
-      thumbnail: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=300",
-      borderColor: "var(--neon-purple)",
-      githubUrl: "#",
+      githubUrl: "https://github.com/dylanewe/godis",
     },
   ];
 
@@ -99,7 +64,7 @@ export function ProjectsGrid() {
         >
           <div className="mb-12">
             <h2 className="font-mono tracking-wider mb-4" style={{ color: "var(--neon-cyan)" }}>
-              PERSONAL_PROJECTS
+              // PROJECTS
             </h2>
             <motion.div
               initial={{ width: 0 }}

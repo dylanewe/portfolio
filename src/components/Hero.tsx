@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { ChevronDown } from "lucide-react";
-import { useState, useEffect } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 interface HeroProps {
@@ -8,15 +7,6 @@ interface HeroProps {
 }
 
 export function Hero({ profileImage }: HeroProps) {
-  const [animationComplete, setAnimationComplete] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimationComplete(true);
-    }, 2500);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="relative min-h-screen flex items-center justify-center pt-[70px] overflow-hidden">
       {/* Animated background grid */}
@@ -24,7 +14,7 @@ export function Hero({ profileImage }: HeroProps) {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `linear-gradient(var(--neon-cyan) 1px, transparent 1px), 
+            backgroundImage: `linear-gradient(var(--neon-cyan) 1px, transparent 1px),
                              linear-gradient(90deg, var(--neon-cyan) 1px, transparent 1px)`,
             backgroundSize: "50px 50px",
           }}
@@ -35,25 +25,24 @@ export function Hero({ profileImage }: HeroProps) {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className={animationComplete ? "flex items-center gap-6" : "text-center"}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col md:flex-row items-center gap-8 md:gap-12"
         >
           {/* Profile Image */}
           <motion.div
-            initial={{ scale: 1, x: 0, y: 0 }}
-            animate={
-              animationComplete
-                ? { scale: 0.4, x: 0, y: 0 }
-                : { scale: 1, x: 0, y: 0 }
-            }
-            transition={{ duration: 1, delay: 1.5 }}
-            className={animationComplete ? "" : "mx-auto mb-8"}
+            initial={{ scale: 2.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{
+              duration: 1.5,
+              ease: [0.43, 0.13, 0.23, 0.96]
+            }}
+            className="flex-shrink-0"
           >
-            <motion.div
+            <div
               className="relative rounded-full overflow-hidden"
               style={{
-                width: "300px",
-                height: "300px",
+                width: "192px",
+                height: "192px",
                 border: `3px solid var(--neon-cyan)`,
                 boxShadow: `0 0 20px var(--neon-cyan)`,
               }}
@@ -61,7 +50,7 @@ export function Hero({ profileImage }: HeroProps) {
               <ImageWithFallback
                 src={profileImage}
                 alt="Dylan Ewe"
-                className="w-full h-full object-cover grayscale"
+                className="w-full h-full object-cover"
               />
               {/* Glitch frame effect */}
               <motion.div
@@ -71,53 +60,42 @@ export function Hero({ profileImage }: HeroProps) {
                   opacity: 0,
                 }}
                 animate={{
-                  opacity: animationComplete ? [0, 0.3, 0] : 0,
-                  x: animationComplete ? [0, -2, 2, 0] : 0,
-                  y: animationComplete ? [0, 2, -2, 0] : 0,
+                  opacity: [0, 0.3, 0],
+                  x: [0, -2, 2, 0],
+                  y: [0, 2, -2, 0],
                 }}
                 transition={{
                   duration: 0.3,
                   repeat: Infinity,
                   repeatDelay: 3,
+                  delay: 2,
                 }}
               />
-            </motion.div>
+            </div>
           </motion.div>
 
           {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className={animationComplete ? "flex-1" : ""}
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="flex-1 text-center md:text-left"
           >
-            <motion.h1
-              className="font-mono tracking-wider mb-2"
-              style={{
-                fontSize: animationComplete ? "36px" : "60px",
-                color: "var(--foreground)",
-              }}
-              animate={{
-                fontSize: animationComplete ? "36px" : "60px",
-              }}
-              transition={{ duration: 1, delay: 1.5 }}
+            <h1
+              className="font-mono tracking-wider mb-2 text-2xl sm:text-3xl md:text-4xl"
+              style={{ color: "var(--foreground)" }}
             >
               DYLAN EWE
-            </motion.h1>
-            <motion.p
-              className="font-mono tracking-widest"
+            </h1>
+            <p
+              className="font-mono tracking-widest text-sm sm:text-base md:text-lg"
               style={{
-                fontSize: animationComplete ? "16px" : "20px",
                 color: "var(--neon-cyan)",
-                letterSpacing: "0.3em",
+                letterSpacing: "0.2em",
               }}
-              animate={{
-                fontSize: animationComplete ? "16px" : "20px",
-              }}
-              transition={{ duration: 1, delay: 1.5 }}
             >
               SOFTWARE ENGINEER
-            </motion.p>
+            </p>
           </motion.div>
         </motion.div>
       </div>
@@ -126,7 +104,7 @@ export function Hero({ profileImage }: HeroProps) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2.5 }}
+        transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <motion.div

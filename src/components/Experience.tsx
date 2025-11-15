@@ -15,39 +15,30 @@ export function Experience() {
 
   const experiences: ExperienceItem[] = [
     {
-      year: "2024",
-      company: "Tech Innovations Inc.",
-      role: "Senior Software Engineer",
-      duration: "2024 - Present",
+      year: "2025",
+      company: "iPiD",
+      role: "Junior Software Engineer",
+      duration: "2025 - Present",
       description:
-        "Leading backend infrastructure development, architecting microservices with Go and Kubernetes. Optimized system performance by 40% through distributed caching strategies.",
+        "Building high-performance payment validation microservices using Go and NodeJS. Responsible for designing and implementing fast, reliable backend systems to handle payment processing workflows.",
       isCurrent: true,
     },
     {
-      year: "2022",
-      company: "CloudScale Solutions",
-      role: "Software Engineer",
-      duration: "2022 - 2024",
+      year: "2025",
+      company: "Waftech Sdn Bhd",
+      role: "Software Development Engineer",
+      duration: "March 2025 - August 2025",
       description:
-        "Developed RESTful and GraphQL APIs serving millions of requests daily. Implemented CI/CD pipelines reducing deployment time by 60%.",
+        "Developed software for custom wafer processing machines using C#. Worked on control systems and automation software for semiconductor manufacturing equipment.",
       isCurrent: false,
     },
     {
-      year: "2020",
-      company: "DataFlow Systems",
-      role: "Backend Developer",
-      duration: "2020 - 2022",
+      year: "2024",
+      company: "University of Wisconsin-Madison",
+      role: "B.S. in Computer Science",
+      duration: "Graduated 2024",
       description:
-        "Built real-time data processing pipelines using Kafka and Python. Designed database schemas and optimized query performance for large-scale applications.",
-      isCurrent: false,
-    },
-    {
-      year: "2019",
-      company: "StartupLab",
-      role: "Junior Developer",
-      duration: "2019 - 2020",
-      description:
-        "Contributed to full-stack development of web applications. Gained experience in modern development practices and agile methodologies.",
+        "Relevant coursework: Artificial Intelligence, Big Data Systems, Algorithms, Operating Systems, Computer Security.",
       isCurrent: false,
     },
   ];
@@ -63,7 +54,7 @@ export function Experience() {
         >
           <div className="mb-12">
             <h2 className="font-mono tracking-wider mb-4" style={{ color: "var(--neon-cyan)" }}>
-              WORK_HISTORY
+              // CHAPTERS
             </h2>
             <motion.div
               initial={{ width: 0 }}
