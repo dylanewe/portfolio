@@ -2,8 +2,8 @@ import { Moon, Sun } from "lucide-react";
 import { motion } from "motion/react";
 
 interface NavigationProps {
-  activeView: "home" | "projects";
-  onNavigate: (view: "home" | "projects") => void;
+  activeView: "home" | "projects" | "minigame";
+  onNavigate: (view: "home" | "projects" | "minigame") => void;
   isDark: boolean;
   toggleTheme: () => void;
 }
@@ -71,6 +71,22 @@ export function Navigation({ activeView, onNavigate, isDark, toggleTheme }: Navi
           >
             PROJECTS
             {activeView === "projects" && (
+              <motion.div
+                layoutId="activeNav"
+                className="absolute -bottom-1 left-0 right-0 h-0.5"
+                style={{ backgroundColor: "var(--neon-cyan)" }}
+              />
+            )}
+          </button>
+          <button
+            onClick={() => onNavigate("minigame")}
+            className="relative font-mono tracking-wider transition-colors"
+            style={{
+              color: activeView === "minigame" ? "var(--neon-cyan)" : "var(--muted-foreground)",
+            }}
+          >
+            MINI GAME
+            {activeView === "minigame" && (
               <motion.div
                 layoutId="activeNav"
                 className="absolute -bottom-1 left-0 right-0 h-0.5"

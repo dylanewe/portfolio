@@ -6,10 +6,11 @@ import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 import { Footer } from "./components/Footer";
 import { ProjectsGrid } from "./components/ProjectsGrid";
+import { MiniGame } from "./components/MiniGame";
 import profileImage from "../data/profile.JPG";
 
 export default function App() {
-  const [activeView, setActiveView] = useState<"home" | "projects">("home");
+  const [activeView, setActiveView] = useState<"home" | "projects" | "minigame">("home");
   const [isDark, setIsDark] = useState(true);
 
   // Initialize theme from localStorage or default to dark
@@ -36,7 +37,7 @@ export default function App() {
     }
   };
 
-  const handleNavigate = (view: "home" | "projects") => {
+  const handleNavigate = (view: "home" | "projects" | "minigame") => {
     setActiveView(view);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -58,9 +59,14 @@ export default function App() {
           <Experience />
           <Footer />
         </>
-      ) : (
+      ) : activeView === "projects" ? (
         <>
           <ProjectsGrid />
+          <Footer />
+        </>
+      ) : (
+        <>
+          <MiniGame />
           <Footer />
         </>
       )}
